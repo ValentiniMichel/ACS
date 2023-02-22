@@ -1,8 +1,6 @@
 function j = getInvJa(q)
-%myRobot.setValues(pinv(myRobot.Ja))
 %simplify(pinv(Ja))
 q3 = q(3);
-%q2 = q(2);
 q1 = q(1);
 
 j = [

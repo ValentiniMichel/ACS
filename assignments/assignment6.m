@@ -18,7 +18,7 @@ qd = [pi -0.2  -pi]';
 dqi = [0 0 0]';
 Ts = 0.001;
 open('simulink_models\joint_space_pd_w_g_comp.slx');
-sim('simulink_models\joint_space_pd_w_g_comp.slx');
+%sim('simulink_models\joint_space_pd_w_g_comp.slx');
 
 %% What happens if g(q) is not taken into account?
 

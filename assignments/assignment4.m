@@ -8,6 +8,7 @@ G = RNE(myRobot, myRobot.q, zero, zero, g0);
 C = RNE(myRobot,myRobot.q, myRobot.dq, zero, zero);
 N = myRobot.N;
 B = zeros(N,N, 'sym');
+
 assume(B, 'real');
 for i = 1:N
     ei = zeros(N, 1);

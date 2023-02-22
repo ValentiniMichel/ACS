@@ -5,11 +5,6 @@
 % help rigidBody
 
 %show(robot,config);
-%xlim([-0.5 0.8])
-%ylim([-0.5 0.5])
-%zlim([0 0.8])
-
-
 clear all;
 close all;
 addpath methods assignments classes;

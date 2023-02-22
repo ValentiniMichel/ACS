@@ -38,8 +38,8 @@ function tau = RNE(myRobot,q,dq,ddq,g0)
     tau = zeros(N, 1, 'sym');
     assume(tau, 'real');
     for i = N:-1:1
-        T = innerT(:,:, i+1);
-        Tm1 = innerT(:,:, i);
+        T = innerT(:,:, i);
+        Tm1 = innerT(:,:, i+1);
         R = T(1:3,1:3);
         Rm1 = Tm1(1:3,1:3);
         r = Tm1(1:3, 4);
