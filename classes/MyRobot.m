@@ -33,9 +33,9 @@ classdef MyRobot < handle
             obj.config = homeConfiguration(obj.robot);
             obj.DH = DH;
             obj.computeDirectKinematics();
-            obj.q = sym('q', [3 1], 'real'); % ABORTO
-            obj.dq = sym('dq', [3 1], 'real'); % BIG ABORTO
-            obj.ddq = sym('ddq', [3 1], 'real'); % GIGA ABORTO
+            obj.q = sym('q', [3 1], 'real'); 
+            obj.dq = sym('dq', [3 1], 'real'); 
+            obj.ddq = sym('ddq', [3 1], 'real');
             obj.N = length(links);
             obj.setLinks(links);
         end
