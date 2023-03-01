@@ -2,20 +2,20 @@
 % Implement the admittance control in the operational space.
 
 
-KD = [400;50;20;10;10;10];
-KP = [5000;300;50;50;50;50];
+KD = [20;20;20;10;10;10];
+KP = [50;50;1000;50;50;50];
 Mt = [0.3 0.2 0.1 1 1 1];
 KDt = [50 100 1 1 1 1];
 KPt = [5 5 10 10 10 10];
 
 Value;
 g_q = [0;-g*m2-g*m3;0];
-K = diag([20 20 1 1 1 1]);
+K = diag([1 1 100 1 1 1]);
 
 qi = [0 0 0]';
 dqi = [0;0;0];
-qf = [0;0;pi/2];
-qr = [0 0 pi/3]';
+qf = [0;-0.2;0];
+qr = [0 -0.1 0]';
 
 xr = getK(qr);
 
@@ -41,11 +41,11 @@ for i=1:DimValues
     end
     if i==2
       %waypoints for joint 2
-      wpts = [0 0 0; 0 0 0];  
+      wpts = [0 -0.2 -0.2; 0 -0.2 -0.2];  
     end
     if i==3
       %waypoints for joint 3
-      wpts = [0 pi/2 pi/2; 0 pi/2 pi/2];  
+      wpts = [0 0 0; 0 0 0];  
     end
     
     [q, dq, ddq, pp] = cubicpolytraj(wpts, tpts, tvec);
