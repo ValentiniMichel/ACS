@@ -1,13 +1,13 @@
 % Assignment12
 % Implement the impedance control in the operational space.
 
-KD = [50;40;10;10;10;10];
-KP = [50;50;100;50;50;50];
+KD = [40;40;40;10;10;10];
+KP = [50;50;50;50;50;50];
 Md = diag([0.3;0.2;0.1;1;1;1]);
 invMd = inv(Md);
 Value;
 g_q = [0;-g*m2-g*m3;0];
-K = diag([1 1 1000 1 1 1]);
+K = diag([1 1 100 1 1 1]);
 
 qi = [0 0 0]';
 dqi = [0;0;0];

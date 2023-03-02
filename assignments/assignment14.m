@@ -5,7 +5,7 @@
 KD = [80;80;80;10;10;10];
 KP = [50;50;50;50;50;50];
 Md = diag([0.3;0.2;0.1;1;1;1]);
-KI = 5;
+KI = 0;
 KF = 5;
 
 invMd = inv(Md);
@@ -27,8 +27,8 @@ xi = getK(qi);
 xf = getK(qf);
 xr = getK(qr);
 
-%open('simulink_models\force_control.slx');
-sim('simulink_models\force_control.slx');
+open('simulink_models\force_control.slx');
+%sim('simulink_models\force_control.slx');
 
 %%
 KI = 5;

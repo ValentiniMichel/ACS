@@ -24,7 +24,7 @@ open('simulink_models\compliance_control.slx');
 %sim('simulink_models\compliance_control.slx');
 
 %% case K >> KP
-K = diag([1 1 1000 1 1 1]);
+K = diag([1 1 500 1 1 1]);
 sim('simulink_models\compliance_control.slx');
 
 %% case K == KP
